@@ -1,0 +1,17 @@
+.container {
+  box-sizing: border-box;
+  border: black solid 1px;
+  width: 1100px;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.item {
+  width: 200px;
+  height: 100px;
+  background-color: lightpink;
+  border: rgb(228, 18, 53) solid 1px;
+  box-sizing: border-box;
+  text-align: center;
+}

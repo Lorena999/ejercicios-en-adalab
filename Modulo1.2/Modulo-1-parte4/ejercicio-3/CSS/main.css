@@ -1,0 +1,16 @@
+.container {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  border: mediumvioletred solid 1px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-right: 20px;
+  margin-left: 20px;
+  align-items: center;
+}
+.item {
+  text-align: center;
+}
