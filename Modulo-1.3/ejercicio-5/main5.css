@@ -1,0 +1,14 @@
+.border-box {
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  margin: auto;
+  border: 5px solid blue;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.image {
+  height: 100px;
+  width: 100px;
+  overflow: auto;
+}
