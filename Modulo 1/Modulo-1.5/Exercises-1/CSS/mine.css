@@ -1,0 +1,9 @@
+.list {
+  display: flex;
+  margin: 20px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-grow: inherit;
+}

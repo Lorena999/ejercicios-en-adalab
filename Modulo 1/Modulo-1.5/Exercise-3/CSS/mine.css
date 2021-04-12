@@ -1,0 +1,12 @@
+.navegador {
+  width: 100vw;
+  height: 80px;
+  top: 0;
+  background-color: blueviolet;
+  position: fixed;
+  z-index: 1;
+}
+.box {
+  top: 90px;
+  position: relative;
+}

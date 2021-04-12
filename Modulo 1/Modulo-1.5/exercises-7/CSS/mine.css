@@ -1,0 +1,8 @@
+.box {
+  background-color: beige;
+  height: 86vh;
+  text-align: center;
+  padding: 20px;
+  overflow: scroll;
+  max-width: 600px;
+}
