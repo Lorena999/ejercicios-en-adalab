@@ -1,0 +1,13 @@
+.container {
+  width: 768px;
+  margin: 0 30px;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 30px;
+  border: darkblue solid 1px;
+}
+
+.title1 {
+  font-size: 28px;
+  font-weight: bold;
+}
