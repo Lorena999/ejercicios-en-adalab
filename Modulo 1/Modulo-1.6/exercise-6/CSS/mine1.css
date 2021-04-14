@@ -1,5 +1,4 @@
 .container {
-  width: 320px;
   margin: 0 20px;
   font-size: 18px;
   line-height: 24px;
@@ -10,4 +9,29 @@
 .title1 {
   font-size: 32px;
   font-weight: bold;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    margin: 40px 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .title1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+
+@media all and (min-width: 1140px) {
+  .container {
+    margin-top: 190px;
+    margin: 0 auto;
+    max-width: 750px;
+  }
+  .title1 {
+    font-size: 42px;
+    font-weight: bold;
+  }
 }
