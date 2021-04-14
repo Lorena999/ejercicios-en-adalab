@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.name {
+  height: 10vh;
+  background-color: grey;
+}
+
+.nav {
+  background-color: lawngreen;
+}
+
+.main {
+  background-color: yellow;
+}
+.title2 {
+  padding: 15px;
+}
+.footer {
+  background-color: grey;
+}
+@media all and (min-width: 480px) {
+  .head {
+    display: inline;
+    max-width: 40%;
+  }
+}
+}
