@@ -1,0 +1,16 @@
+.main {
+  height: 80vw;
+  background-color: crimson;
+}
+
+@media all and (min-width: 480px) {
+  .main {
+    background-color: yellow;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .main {
+    background-color: lawngreen;
+  }
+}
