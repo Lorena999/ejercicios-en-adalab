@@ -1,0 +1,27 @@
+@import "core/variables";
+@import "core/reset";
+@import "components/code";
+@import "components/links";
+@import "layout/page";
+@import "layout/header";
+@import "layout/footer";
+@import "pages/index";
+
+.header {
+  height: 75px;
+  @media all and (min-width: 768px) {
+    height: 100px;
+  }
+  @media all and (min-width: 1280px) {
+    height: 110px;
+  }
+  .main {
+    box-sizing: border-box;
+    height: 50vh;
+    background-color: blue;
+  }
+}
+.botom {
+  height: 45px;
+  border-radius: 5px;
+}
