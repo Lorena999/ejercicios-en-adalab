@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20vh 60vh 20vh;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+.item1 {
+  background-color: pink;
+  grid-column: span 12;
+}
+.item2 {
+  background-color: purple;
+  grid-column: span 4;
+}
+.item3 {
+  background-color: salmon;
+  grid-column: 5/13;
+}
+.item4 {
+  background-color: blue;
+  grid-column: span 12;
+}
