@@ -1,0 +1,19 @@
+.popup {
+  width: 50%;
+  height: 30vh;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  background-color: white;
+  color: green;
+  font-size: 32px;
+  margin: auto;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transform: translate(1000px);
+}
+
+body:hover .popup {
+  transform: translate(0);
+}

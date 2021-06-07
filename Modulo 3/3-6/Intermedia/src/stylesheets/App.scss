@@ -1,0 +1,28 @@
+@import "./variables";
+@import "./reset";
+
+main {
+  padding: 20px;
+  color: #ddd;
+}
+.box {
+  background-color: gray;
+  padding: 20px;
+}
+.box__card {
+  background-color: white;
+  padding-left: 20px;
+  margin: 20px;
+  display: list-item inline;
+}
+.box__card-icon {
+  font-size: 60px;
+  color: rgb(87, 133, 87);
+  transform: translate(0, 30px);
+}
+.li.box__card {
+  text-align: none;
+}
+.box__card-title {
+  align-items: center;
+}

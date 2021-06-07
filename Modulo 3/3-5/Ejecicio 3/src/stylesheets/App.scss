@@ -1,0 +1,17 @@
+@import "./variables";
+@import "./reset";
+
+main {
+  padding: 20px;
+  color: #ddd;
+}
+.square {
+  width: 250px;
+  height: 250px;
+}
+.square-blue {
+  background-color: blue;
+}
+.square-red {
+  background-color: red;
+}

@@ -1,1 +1,20 @@
-
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  background-color: pink;
+  height: 20vh;
+}
+.menu {
+  background-color: blue;
+  height: 60vh;
+}
+.content {
+  background-color: coral;
+}
+.footer {
+  background-color: lightblue;
+  height: 20vh;
+}

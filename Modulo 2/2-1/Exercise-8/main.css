@@ -1,0 +1,17 @@
+.buttonGo {
+  color: black;
+  background-color: blue;
+  border-radius: 25%;
+  padding: 20px;
+  border: solid 1px red;
+}
+.buttonMore {
+  color: black;
+  background-color: blue;
+  border-radius: 25%;
+  padding: 20px;
+  border: solid 1px red;
+}
+.buttondisable {
+  opacity: 0.2;
+}
