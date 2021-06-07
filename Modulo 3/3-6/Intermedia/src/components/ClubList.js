@@ -4,11 +4,11 @@ import Club from "./Club";
 const ClubList = (props) => {
   const clubItems = props.list.map((item, index) => {
     return (
-      <li>
+      <li key={index}>
         <Club club={item} />
       </li>
     );
   });
-  return <ul></ul>;
+  return <ul>{clubItems}</ul>;
 };
 export default ClubList;
