@@ -2,6 +2,11 @@ import React from "react";
 //import Preview from "./Preview";
 
 function Form(props) {
+  const handleChange = (ev) => {
+    const name = ev.target.name;
+    const value = ev.target.value;
+    props.handleChange(name, value);
+  };
   return (
     <form>
       <label htmlFor="name">Name:</label>
@@ -10,21 +15,19 @@ function Form(props) {
         name="name"
         type="text"
         value={props.name}
-        handleChange={props.handleChange}
+        onChange={handleChange}
       />
-      <textarea
-        name="textarea"
-        id="textarea"
-        id="description"
-        value={props.description}
-        cols="30"
-        rows="10"
-        handleChange={props.handleChange}
-      ></textarea>
-      <select handleChange={props.handleChange} name="language" id="">
-        <option value={props.language}>Español</option>
-        <option value={props.language}>Portugués</option>
-        <option value={props.language}>Inglés</option>
+      <textarea name="description" id="text" onChange={handleChange}></textarea>
+      <select onChange={handleChange} name="language" id="lang">
+        <option value="Español" name="language">
+          Español
+        </option>
+        <option value="Portugués" name="language">
+          Portugués
+        </option>
+        <option value="Inglés" name="language">
+          Inglés
+        </option>
       </select>
     </form>
   );
