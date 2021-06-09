@@ -1,11 +1,15 @@
 import React from "react";
-//import Preview from "./Preview";
 
 function Form(props) {
   const handleChange = (ev) => {
     const name = ev.target.name;
     const value = ev.target.value;
     props.handleChange(name, value);
+  };
+  const handleAge = (ev) => {
+    const age = ev.target.name;
+    const value = ev.target.value;
+    props.handleAge(age, value);
   };
   return (
     <form>
@@ -29,6 +33,47 @@ function Form(props) {
           Inglés
         </option>
       </select>
+      <label htmlFor="">Edad recomendada:</label>
+      <input
+        type="radio"
+        name="age"
+        value="A"
+        onChange={handleAge}
+        checked={props.age === "A"}
+      />
+      Todos los públicos
+      <input
+        type="radio"
+        name="age"
+        value="7"
+        onChange={handleAge}
+        checked={props.age === "7"}
+      />
+      7 años
+      <input
+        type="radio"
+        name="age"
+        value="12"
+        onChange={handleAge}
+        checked={props.age === "12"}
+      />
+      12 años
+      <input
+        type="radio"
+        name="age"
+        value="16"
+        onChange={handleAge}
+        checked={props.age === "16"}
+      />
+      Mayores de 16 años
+      <input
+        type="radio"
+        name="age"
+        value="18"
+        onChange={handleAge}
+        checked={props.age === "18"}
+      />
+      Mayores de 18
     </form>
   );
 }
