@@ -1,0 +1,24 @@
+@import "./variables";
+@import "./reset";
+
+main {
+  padding: 20px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+}
+.list {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.filters {
+  margin: 50px;
+  width: 25%;
+}
+.filters__item {
+  margin-bottom: 30px;
+}

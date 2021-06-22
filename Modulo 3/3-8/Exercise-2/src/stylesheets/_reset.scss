@@ -1,0 +1,16 @@
+* {
+  color: black;
+  font-family: "Rubik", "Roboto", sans-serif;
+  font-size: 18px;
+  list-style: none;
+}
+
+body {
+  padding: 20px;
+  background-color: var(--background);
+}
+
+pre,
+.monospaced {
+  font-family: var(--monospace);
+}
