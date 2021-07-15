@@ -1,15 +1,10 @@
-'use strict'
-const namePer = 'Lorena';
-/*const access = document.querySelector('.access');
+"use strict";
+let userAccess = "Lola";
 
-
-if (name ==='Lorena' || 'Patricia') {
-    access.innerHTML = `Bienvenida ${name}`
+if (userAccess === "Lorena" || userAccess === "Patricia") {
+  console.log("Bienvenida " + userAccess);
 } else {
-    access.innerHTML ='Lo siento pero el usuario que has introducido no está registrado.'
-} */
-if (namePer === 'Lorena' || namePer === 'Patricia') {
-    console.log("Bienvenida " + namePer);
-} else {
-    console.log("Usuario no registrado.")
+  console.log(
+    "Lo siento pero el usuario que has introducido no está registrado."
+  );
 }
