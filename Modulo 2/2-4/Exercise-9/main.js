@@ -43,9 +43,51 @@ function taxIva (price) {
 };*/
 
 // arrow fuction
-const price = 1000;
 const taxIVA = (price) => {
   const iva = price * 0.21;
   const priceTotal = price + iva;
   return `El precio sin IVA es: ${price} , el IVA es: ${iva}, y el total es: ${priceTotal}`;
 };
+console.log(taxIVA(1200));
+
+/*function even(a) {
+  if (a % 2 === 0) {
+    return "El número introducido es par";
+  } else {
+    return "El número instroducido en impar";
+  }
+};*/
+
+// arrow fuction
+const even = (a) => {
+  if (a % 2 === 0) {
+    return "El número introducido es par";
+  } else {
+    return "El número instroducido en impar";
+  }
+};
+
+console.log(even(2398074));
+
+// arrow fuction 2
+const even2 = (a) => (a % 2 === 0 ? true : false);
+console.log(even2(14));
+
+/*function getEl(sel) {
+  const selector = document.querySelector(sel);
+  if (selector === null) {
+    return `No existe ningún elemento con clase, id o tag llamado ${sel}`;
+  } else {
+    return document.querySelector(sel);
+  }
+};*/
+// arrow fuction
+const getEl = (sel) => {
+  const selector = document.querySelector(sel);
+  if (selector === null) {
+    return `No existe ningún elemento con clase, id o tag llamado ${sel}`;
+  } else {
+    return document.querySelector(sel);
+  }
+};
+console.log(getEl(".js-title"));
