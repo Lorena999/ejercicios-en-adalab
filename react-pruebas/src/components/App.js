@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/App.css";
 import State from "./State";
+import Add from "./Add";
 
 function App() {
   const handleButtom = (ev) => {
@@ -30,6 +31,7 @@ function App() {
       </form>
       <h3>Su nombre es {userName}</h3>
       <State />
+      <Add />
     </div>
   );
 }
