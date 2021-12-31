@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/App.css";
 import State from "./State";
 import Add from "./Add";
+import Counter from "./Counter";
 
 function App() {
   const handleButtom = (ev) => {
@@ -32,6 +33,7 @@ function App() {
       <h3>Su nombre es {userName}</h3>
       <State />
       <Add />
+      <Counter />
     </div>
   );
 }
