@@ -3,6 +3,7 @@ import "../styles/App.css";
 import State from "./State";
 import Add from "./Add";
 import Counter from "./Counter";
+import Dark from "./Dark";
 
 function App() {
   const handleButtom = (ev) => {
@@ -34,6 +35,8 @@ function App() {
       <State />
       <Add />
       <Counter />
+      <br />
+      <Dark />
     </div>
   );
 }
