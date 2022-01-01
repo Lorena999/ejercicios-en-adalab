@@ -3,6 +3,7 @@ import "../styles/hamburguer.css";
 
 export const Hamburguer = () => {
   const [open, setOpen] = useState("hidden");
+
   const handleMenu = () => {
     if (open === "hidden") {
       setOpen(!open);
