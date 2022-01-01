@@ -1,0 +1,15 @@
+.menu__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #737272;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+.hidden {
+  visibility: hidden;
+}
+.bx {
+  color: #737272;
+}
