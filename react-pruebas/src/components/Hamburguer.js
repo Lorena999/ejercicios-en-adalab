@@ -2,19 +2,13 @@ import React, { useState } from "react";
 import "../styles/hamburguer.css";
 
 export const Hamburguer = () => {
-  const [open, setOpen] = useState("hidden");
-
+  const [isOpen, setIsOpen] = useState(false);
   const handleMenu = () => {
-    if (open === "hidden") {
-      setOpen(!open);
-    } else {
-      setOpen("hidden");
-    }
+    setIsOpen(!isOpen);
   };
-  return (
-    <div>
-      <box-icon name="menu" className="bx" onClick={handleMenu}></box-icon>
-      <div className={open}>
+  const renderMenu = () => {
+    if (isOpen === true) {
+      return (
         <div className="menu__container">
           <box-icon
             name="right-arrow-alt"
@@ -34,7 +28,23 @@ export const Hamburguer = () => {
             Contacto
           </a>
         </div>
-      </div>
-    </div>
-  );
+      );
+    } else {
+      return (
+        <div onClick={handleMenu}>
+          <box-icon name="menu" className="bx"></box-icon>
+        </div>
+      );
+    }
+  };
+  // const [open, setOpen] = useState("hidden");
+
+  // const handleMenu = () => {
+  //   if (open === "hidden") {
+  //     setOpen(!open);
+  //   } else {
+  //     setOpen("hidden");
+  //   }
+  // };
+  return renderMenu();
 };
