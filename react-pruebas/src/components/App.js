@@ -6,6 +6,7 @@ import Counter from "./Counter";
 import Dark from "./Dark";
 import { Hamburguer } from "./Hamburguer";
 import Form from "./Form";
+import Receta from "./Receta";
 
 function App() {
   const handleButtom = (ev) => {
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <div className="App">
+      <Receta />
       <Form />
       <Hamburguer />
 

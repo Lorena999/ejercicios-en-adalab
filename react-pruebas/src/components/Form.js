@@ -18,27 +18,24 @@ const Form = () => {
   const handleByNow = (ev) => {
     setBy(ev.target.checked);
   };
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+    //función enviar
+  };
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit} onChange={handleInput}>
         <label htmlFor="name">Escribe un nombre: </label>
-        <input
-          type="name"
-          name="name"
-          id="name"
-          placeholder="María García"
-          onChange={handleInput}
-        />
+        <input type="name" name="name" id="name" placeholder="María García" />
         <label htmlFor="email">Tu email: </label>
         <input
           type="email"
           name="email"
           id="email"
           placeholder="ejemplo@email.com"
-          onChange={handleInput}
         />
         <label htmlFor="age">Tu edad: </label>
-        <input type="number" id="age" onChange={handleInput} />
+        <input type="number" id="age" name="age" />
       </form>
       <p>
         Tu nombre es {name}, tu email {email} y tienes {age} años
@@ -79,6 +76,8 @@ const Form = () => {
         onChange={sizeInput}
       />
       <p>Tu talla de camiseta es {size}</p>
+
+      <input type="submit" value="Enviar" />
     </div>
   );
 };
