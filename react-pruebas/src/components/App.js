@@ -7,6 +7,7 @@ import Dark from "./Dark";
 import { Hamburguer } from "./Hamburguer";
 import Form from "./Form";
 import Receta from "./Receta";
+import Traductor from "./Traductor";
 
 function App() {
   const handleButtom = (ev) => {
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div className="App">
+      <Traductor />
       <Receta />
       <Form />
       <Hamburguer />
