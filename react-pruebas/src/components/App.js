@@ -8,6 +8,7 @@ import { Hamburguer } from "./Hamburguer";
 import Form from "./Form";
 import Receta from "./Receta";
 import Traductor from "./Traductor";
+import Map from "./Map";
 
 function App() {
   const handleButtom = (ev) => {
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div className="App">
+      <Map />
       <Traductor />
       <Receta />
       <Form />
