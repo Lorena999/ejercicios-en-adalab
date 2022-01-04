@@ -1,25 +1,39 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 function Counter() {
   const [counter, setCounter] = useState(0);
-  const handleCounter = () => {
-    const add = counter + 1;
-    setCounter(add);
+  const handleCounterInput = (ev) => {
+    setCounter(ev.target.value);
+  };
+  const handleCounter = (counter) => {
+    setCounter(counter + 1);
   };
   const handleCounter2 = () => {
-    const rest = counter - 1;
-    setCounter(rest);
+    setCounter(counter - 1);
   };
   const handleReset = () => {
-    let counter = 0;
-    setCounter(counter);
+    setCounter(0);
+  };
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
   };
   return (
     <div>
-      <h1 className="title">Contador: {counter}</h1>
-      <button onClick={handleCounter}>Añade 1</button>
-      <button onClick={handleCounter2}>Resta 1</button>
-      <button onClick={handleReset}>Vuelve a 0</button>
+      <h1 className="title">Contador: </h1>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="counter">Escribe aquí un número</label>
+        <input
+          type="number"
+          name="counter"
+          id="counter"
+          value={counter}
+          onChange={handleCounterInput}
+        />
+        <button onClick={handleCounter}>Añade 1</button>
+        <button onClick={handleCounter2}>Resta 1</button>
+        <button onClick={handleReset}>Vuelve a 0</button>
+        <p>Valor del contador {counter}</p>
+      </form>
     </div>
   );
 }

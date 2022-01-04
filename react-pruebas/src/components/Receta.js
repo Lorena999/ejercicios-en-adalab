@@ -39,7 +39,7 @@ const Receta = () => {
         <input
           type="checkbox"
           className="input"
-          value="Macarrones"
+          checked={macarrones}
           name="Macarrones"
           onChange={handleMacarrones}
         />
@@ -49,7 +49,7 @@ const Receta = () => {
         <input
           type="checkbox"
           className="input"
-          value="Patatas"
+          checked={potato}
           name="Patatas"
           onChange={handlePotato}
         />
@@ -59,7 +59,7 @@ const Receta = () => {
         <input
           type="checkbox"
           className="input"
-          value="Nueces"
+          checked={nueces}
           name="Nueces"
           onChange={handleNueces}
         />
@@ -69,7 +69,7 @@ const Receta = () => {
         <input
           type="checkbox"
           className="input"
-          value="Huevos"
+          checked={eggs}
           name="Huevos"
           onChange={handleEggs}
         />
@@ -79,7 +79,7 @@ const Receta = () => {
         <input
           type="checkbox"
           className="input"
-          value="Cebolla"
+          checked={onion}
           name="Cebolla"
           onChange={handleOnion}
         />
@@ -89,7 +89,7 @@ const Receta = () => {
         <input
           type="checkbox"
           className="input"
-          value="Cerveza"
+          checked={cerveza}
           name="Cerveza"
           onChange={handleCerveza}
         />
