@@ -12,13 +12,13 @@ const ToDo = () => {
     },
   ];
   const completed = () => {
-    if ({ value } === true) return "completed";
+    if (completed === true) return "completed";
   };
 
   const renderTasks = () => {
     return tasks.map((task, index) => {
       return (
-        <li key={index} value={task.completed} className={completed}>
+        <li key={index} className={task.completed ? "completed" : false}>
           {task.task}
         </li>
       );

@@ -10,6 +10,7 @@ import Receta from "./Receta";
 import Traductor from "./Traductor";
 import Map from "./Map";
 import ToDo from "./ToDo";
+import Series from "./Series";
 
 function App() {
   const handleButtom = (ev) => {
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div className="App">
+      <Series />
       <ToDo />
       <Map />
       <Traductor />
