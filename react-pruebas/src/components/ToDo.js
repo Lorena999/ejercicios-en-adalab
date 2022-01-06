@@ -1,25 +1,41 @@
 import React from "react";
+import { useState } from "react";
 import "../styles/todo.css";
 
 const ToDo = () => {
-  const tasks = [
-    { task: "Comprar harina, jamón y pan rallado", completed: true },
-    { task: "Hacer croquetas ricas", completed: true },
-    { task: "Ir a la puerta de un gimnasio", completed: false },
+  const [tasks, setTasks] = useState([
+    { tarea: "Comprar harina, jamón y pan rallado", completed: true },
+    { tarea: "Hacer croquetas ricas", completed: true },
+    { tarea: "Ir a la puerta de un gimnasio", completed: false },
     {
-      task: "Comerme las croquetas mirando a la gente que entra en el gimnasio",
+      tarea:
+        "Comerme las croquetas mirando a la gente que entra en el gimnasio",
       completed: false,
     },
-  ];
-  const completed = () => {
-    if (completed === true) return "completed";
+  ]);
+
+  const handleToDo = (ev) => {
+    //buscamos el id de la tarea clicada
+    const clikedTaskId = ev.currentTarget.id;
+    //buscamos la tarea clicada a través de su id
+    const foundTask = tasks.find((task) => task.index === clikedTaskId);
+    console.log(foundTask);
+    //invertimos la propiedad de la tarea completada
+    foundTask.completed === true ? !foundTask.completed : foundTask.completed;
+    //guardamos las series en el estado spread
+    setTasks(...tasks);
   };
 
   const renderTasks = () => {
     return tasks.map((task, index) => {
       return (
-        <li key={index} className={task.completed ? "completed" : false}>
-          {task.task}
+        <li
+          key={index}
+          id={index}
+          className={task.completed ? "completed" : ""}
+          onClick={handleToDo}
+        >
+          {task.tarea}
         </li>
       );
     });

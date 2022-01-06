@@ -9,6 +9,8 @@ const Series = () => {
   ];
   // Crearmos las series en el estado indicando el array inicial
   const [series, setSeries] = useState(favoriteSeries);
+  const [searchName, setSearchName] = useState("");
+  const [searchIsFavorite, setSearchIsFavorite] = useState(false);
 
   // Función manejadora que se ejecuta cuando la usuaria pulsa en una serie
   const handleFavorite = (ev) => {
@@ -23,23 +25,62 @@ const Series = () => {
     setSeries([...series]);
   };
 
+  const handleSearchName = (ev) => {
+    setSearchName(ev.target.value);
+  };
+  const handleSearchIsFavorite = (ev) => {
+    setSearchIsFavorite(ev.target.checked);
+  };
+
+  //funciones de renderizado
   const renderSeries = () => {
-    return series.map((serie) => {
-      return (
-        // Renderizamos cada serie añdiendo el atributo id
-        <li key={serie.id} id={serie.id} onClick={handleFavorite}>
-          <h2>{serie.name}</h2>
-          {/* Pintamos si cada serie es favorita usando el atributo isFavorite */}
-          <p>Es mi serie favorita: {serie.isFavorite ? "Sí" : "No"}</p>
-        </li>
-      );
-    });
+    return (
+      series
+        .filter((serie) => {
+          return serie.name.toLowerCase().includes(searchName.toLowerCase());
+        })
+        .filter((serie) => {
+          if (searchIsFavorite === true) {
+            return serie.isFavorite === true;
+          } else {
+            return true;
+          }
+        })
+        //mapeamos
+        .map((serie) => {
+          return (
+            // Renderizamos cada serie añdiendo el atributo id
+            <li key={serie.id} id={serie.id} onClick={handleFavorite}>
+              <h2>{serie.name}</h2>
+              {/* Pintamos si cada serie es favorita usando el atributo isFavorite */}
+              <p>Es mi serie favorita: {serie.isFavorite ? "Sí" : "No"}</p>
+            </li>
+          );
+        })
+    );
   };
 
   return (
     <div>
       <h1>Lista de series favoritas:</h1>
       <ul>{renderSeries()}</ul>
+      <form>
+        <label htmlFor="searchName">Buscar por nombre de serie</label>
+        <input
+          type="text"
+          id="searchName"
+          value={searchName}
+          onChange={handleSearchName}
+        />
+        <br />
+        <label htmlFor="searchIsFavorite">Mostrar solo las favoritas</label>
+        <input
+          type="checkbox"
+          id="searchIsFavorite"
+          checked={searchIsFavorite}
+          onChange={handleSearchIsFavorite}
+        />
+      </form>
     </div>
   );
 };
