@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Objets = () => {
+  const [shipping, setShipping] = useState({});
+  const handleAddress = (ev) => {
+    shipping.address = ev.target.value;
+    setShipping({ ...shipping });
+  };
+  const handleCity = (ev) => {
+    shipping.city = ev.target.value;
+    setShipping({ ...shipping });
+  };
   return (
     <div>
       <h1>Indica tu dirección para el envío:</h1>
@@ -10,22 +19,23 @@ const Objets = () => {
         <input
           type="text"
           id="address"
-          value={shippingAddress}
+          value={shipping.address}
           onChange={handleAddress}
         />
-        <label htmlFor="city">Indica tu dirección postal:</label>
+        <br />
+        <label htmlFor="city">Indica tu ciudad:</label>
         <input
           type="text"
           id="city"
-          value={shippingCity}
+          value={shipping.city}
           onChange={handleCity}
         />
       </form>
 
       <p>
-        Te lo vamos a enviar a la dirección <strong>{shippingAddress}</strong>{" "}
+        Te lo vamos a enviar a la dirección <strong>{shipping.address}</strong>{" "}
         en la ciudad
-        <strong> {shippingCity}</strong>.
+        <strong> {shipping.city}</strong>.
       </p>
     </div>
   );
