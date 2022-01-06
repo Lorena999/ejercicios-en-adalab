@@ -9,8 +9,10 @@ import Form from "./Form";
 import Receta from "./Receta";
 import Traductor from "./Traductor";
 import Map from "./Map";
-import ToDo from "./ToDo";
+// import ToDo from "./ToDo";
 import Series from "./Series";
+import SeriesB from "./SeriesB";
+import Objets from "./Objets";
 
 function App() {
   const handleButtom = (ev) => {
@@ -31,8 +33,10 @@ function App() {
 
   return (
     <div className="App">
+      <Objets />
+      <SeriesB />
       <Series />
-      <ToDo />
+      {/* <ToDo /> */}
       <Map />
       <Traductor />
       <Receta />
