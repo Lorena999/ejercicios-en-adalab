@@ -6,7 +6,6 @@ const Paranormal = () => {
   useEffect(() => {
     callToApi().then((data) => {
       setParanormalData(data);
-      console.log(data);
     });
   }, []);
 
