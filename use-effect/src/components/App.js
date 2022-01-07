@@ -1,9 +1,10 @@
 import "../styles/App.css";
+import Paranormal from "./Paranormal";
 
 function App() {
   return (
-    <div classNameName="App">
-      <h1 className="header__title">Hola mundo</h1>
+    <div className="App">
+      <Paranormal />
     </div>
   );
 }
