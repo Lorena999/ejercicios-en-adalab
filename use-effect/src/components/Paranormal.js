@@ -6,20 +6,20 @@ const Paranormal = () => {
   useEffect(() => {
     callToApi().then((data) => {
       setParanormalData(data);
-      console.log(paranormalData);
+      console.log(data);
     });
   }, []);
 
-  const renderShow = () => {
-    paranormalData.map((paranormalData) => {
-      return <li>{paranormalData.name}</li>;
-    });
-  };
+  // const renderShow = () => {
+  //   paranormalData.map((paranormalData) => {
+  //     return <li>{paranormalData.name}</li>;
+  //   });
+  // };
 
   return (
     <div>
       <h1 className="header__title">Paranormal activity</h1>
-      <ul>{renderShow()}</ul>
+      {/* <ul>{renderShow()}</ul> */}
     </div>
   );
 };
