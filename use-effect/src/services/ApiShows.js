@@ -7,6 +7,8 @@ const ApiShows = (search) => {
       const result = response.map((show) => {
         return {
           name: show.show.name,
+          language: show.show.language,
+          image: show.show.image,
         };
       });
       return result;

@@ -2,19 +2,29 @@ import React, { useState, useEffect } from "react";
 import Api from "../services/ApiShows";
 
 const Shows = () => {
-  const [show, setShow] = useState([]);
+  const [shows, setShows] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
     Api(search).then((response) => {
-      setShow(response);
+      setShows(response);
     });
   }, [search]);
-  console.log(show);
+  console.log(shows);
 
   const handleSearchShow = (ev) => {
     const search = ev.target.value;
     setSearch(search);
+  };
+  const renderShows = () => {
+    return shows.map((show, index) => {
+      return (
+        <li key={index}>
+          <h2>Nombre: {show.name}</h2>
+          <p>Idioma: {show.language}</p>
+        </li>
+      );
+    });
   };
 
   return (
@@ -24,6 +34,7 @@ const Shows = () => {
         <label htmlFor="search">Pon el título aquí</label>
         <input type="text" name="search" onChange={handleSearchShow} />
       </form>
+      <ul>{renderShows()}</ul>
     </div>
   );
 };
