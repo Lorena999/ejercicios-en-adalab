@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Api from "../services/ApiShows";
+import ls from "../services/LocalStorage";
+console.log(ls);
 
 const Shows = () => {
   const [shows, setShows] = useState([]);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(ls.get("search", ""));
 
   useEffect(() => {
+    ls.set("search", search);
     Api(search).then((response) => {
       setShows(response);
     });
