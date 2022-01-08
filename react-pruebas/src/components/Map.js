@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Map = () => {
-  const adalabers = ["María", "Luisa", "Pedro"];
+  const [adalabers, setAdalabers] = useState(["María", "Luisa", "Pedro"]);
   const users = [
     { name: "María", nickname: "Fugitiva", id: "6754" },
     { name: "Juana", nickname: "Veloz", id: "6750" },
     { name: "Siena", nickname: "Miller", id: "6759" },
   ];
+  const handleNewAdalaber = (ev) => {
+    setAdalabers(ev.target.value);
+  };
 
   const renderAdalabers = () => {
     return adalabers.map((adalaber, index) => {
@@ -29,6 +32,12 @@ const Map = () => {
       <ul>{renderAdalabers()}</ul>
       <h1>Lista de usuarios</h1>
       <ul>{renderUsers()}</ul>
+      <h2>Agrega una Adalaber</h2>
+      <form>
+        <label htmlFor="new">Nombre</label>
+        <input type="text" name="new" onChange={handleNewAdalaber} />
+        <button>Añadir</button>
+      </form>
     </div>
   );
 };
