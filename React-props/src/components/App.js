@@ -1,5 +1,7 @@
 // Fichero src/components/App.js
 import { useState } from "react";
+import InputGroupText from "./InputGroupText";
+import Preview from "./Preview";
 
 const App = () => {
   // Estados del componente
@@ -46,15 +48,6 @@ const App = () => {
   };
 
   // Funciones que nos ayudan a renderizar
-  const renderPaymentTypeText = () => {
-    if (paymentType === "creditCard") {
-      return "Tarjeta de crédito";
-    } else if (paymentType === "cash") {
-      return "Efectivo";
-    } else if (paymentType === "cashOnDelivery") {
-      return "Contra reembolso";
-    }
-  };
 
   const isValidForm = () => {
     // El formulario solo es válido cuando los inputs de tipo texto no estén vacíos, cuando se haya marcado una tipo de pago y cuando los términos legales sean true
@@ -77,20 +70,12 @@ const App = () => {
         <h2>Rellena tus datos para finalizar la compra:</h2>
         <div className="form">
           {/* name */}
-          <div className="input-group-text">
-            <label className="label-text" htmlFor="name">
-              Escribe un nombre:
-            </label>
-            <input
-              className="input-text"
-              type="text"
-              name="name"
-              id="name"
-              placeholder="María García"
-              value={name}
-              onChange={handleName}
-            />
-          </div>
+          <InputGroupText
+            labeltext="Escribe tu nombre"
+            name={name}
+            placeholder="Maria Garcia"
+            handleName={handleName}
+          />
 
           {/* email */}
           <div className="input-group-text">
@@ -192,20 +177,13 @@ const App = () => {
           </div>
         </div>
 
-        <div className="preview">
-          <h2>Tus datos son:</h2>
-          <ul>
-            <li>Nombre: {name}</li>
-            <li>Email: {email}</li>
-            <li>Región: {region}</li>
-            <li>Método de pago: {renderPaymentTypeText()}</li>
-            <li>
-              Has aceptado nuestros términos legales:{" "}
-              {legalTerms === true ? "Sí" : "No"}
-            </li>
-          </ul>
-        </div>
-
+        <Preview
+          name={name}
+          email={email}
+          region={region}
+          paymentType={paymentType}
+          legalTerms={legalTerms}
+        />
         {/* reset */}
         {/* Este botón debe estar inhabilitado mientras el formulario no sea válido */}
         <input
