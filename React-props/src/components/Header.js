@@ -11,6 +11,7 @@ const Header = () => {
           className="menu-link"
           href="https://adalab.es/blog/"
           text="Blog"
+          target="_black"
         />
 
         <Link
