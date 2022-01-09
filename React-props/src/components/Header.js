@@ -1,23 +1,25 @@
 import React from "react";
+import Link from "./Link";
 
 const Header = () => {
   return (
     <nav>
       <ul>
-        <li className="menu-item">
-          <a title="Blog" className="menu-link" href="https://adalab.es/blog/">
-            Blog
-          </a>
-        </li>
-        <li className="menu-item">
-          <a
-            title="Contacto"
-            className="menu-link"
-            href="https://adalab.es/contacto/"
-          >
-            Contacto
-          </a>
-        </li>
+        <Link
+          className="menu-item"
+          title="Blog"
+          className="menu-link"
+          href="https://adalab.es/blog/"
+          text="Blog"
+        />
+
+        <Link
+          className="menu-item"
+          title="Blog"
+          className="menu-link"
+          href="https://adalab.es/contacto/"
+          text="Contacto"
+        />
       </ul>
     </nav>
   );
