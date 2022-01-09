@@ -1,6 +1,10 @@
 import React from "react";
 
 const InputGroupText = (props) => {
+  const handleInputChange = (ev) => {
+    props.handleName(ev.target.value);
+    props.handleEmail(ev.target.value);
+  };
   return (
     <div className="input-group-text">
       <label className="label-text" htmlFor="name">
@@ -13,7 +17,7 @@ const InputGroupText = (props) => {
         id={props.name}
         placeholder={props.placeholder}
         value={props.name}
-        onChange={props.handleName}
+        onChange={handleInputChange}
       />
     </div>
   );
