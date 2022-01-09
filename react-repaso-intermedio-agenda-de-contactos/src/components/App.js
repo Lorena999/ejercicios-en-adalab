@@ -3,6 +3,7 @@ import "../styles/App.scss";
 
 function App() {
   const [searchName, setSearchName] = useState("");
+
   const [users, setUser] = useState([
     {
       name: "Lola Martinez",
@@ -25,10 +26,17 @@ function App() {
       email: "jane@adalab.es",
     },
   ]);
+
   const handleFilterName = (ev) => {
     setSearchName(ev.target.value);
   };
 
+  //   const handleName = (ev) => {
+  //     users.name = ev.target.value;
+  //     setUser({ ...users });
+  //     console.log(users);
+  //   };
+  // //
   const renderContacts = () => {
     return users
       .filter((user) => {
