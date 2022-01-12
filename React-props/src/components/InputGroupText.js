@@ -2,8 +2,7 @@ import React from "react";
 
 const InputGroupText = (props) => {
   const handleInputChange = (ev) => {
-    props.handleName(ev.target.value);
-    props.handleEmail(ev.target.value);
+    props.handleChange(ev.target.value);
   };
   return (
     <div className="input-group-text">

@@ -12,13 +12,18 @@ const App = () => {
   const [legalTerms, setLegalTerms] = useState(false);
 
   // Eventos
-  const handleName = (value) => {
-    setName(value);
+  const handleChange = (name) => {
+    setName(name);
+    setEmail(email);
   };
 
-  const handleEmail = (value) => {
-    setEmail(value);
-  };
+  // const handleName = (value) => {
+  //   setName(value);
+  // };
+
+  // const handleEmail = (value) => {
+  //   setEmail(value);
+  // };
 
   const handleRegion = (ev) => {
     setRegion(ev.target.value);
@@ -74,7 +79,7 @@ const App = () => {
             labeltext="Escribe tu nombre"
             name={name}
             placeholder="Maria Garcia"
-            handleName={handleName}
+            handleChange={handleChange}
           />
 
           {/* email */}
@@ -82,7 +87,7 @@ const App = () => {
             labeltext="Escribe un email:"
             name={email}
             placeholder="mariagarcia@gmail.com"
-            handleEmail={handleEmail}
+            handleChange={handleChange}
           />
           {/* <div className="input-group-text">
             <label className="label-text" htmlFor="email">
