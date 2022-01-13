@@ -12,18 +12,17 @@ const App = () => {
   const [legalTerms, setLegalTerms] = useState(false);
 
   // Eventos
-  const handleChange = (name) => {
-    setName(name);
-    setEmail(email);
+  const handleChange = (value) => {
+    setName(value);
   };
 
   // const handleName = (value) => {
   //   setName(value);
   // };
 
-  // const handleEmail = (value) => {
-  //   setEmail(value);
-  // };
+  const handleEmail = (value) => {
+    setEmail(value);
+  };
 
   const handleRegion = (ev) => {
     setRegion(ev.target.value);
@@ -80,29 +79,11 @@ const App = () => {
             name={name}
             placeholder="Maria Garcia"
             handleChange={handleChange}
-          />
-
-          {/* email */}
-          <InputGroupText
             labeltext="Escribe un email:"
-            name={email}
+            email={email}
             placeholder="mariagarcia@gmail.com"
-            handleChange={handleChange}
+            handleEmail={handleEmail}
           />
-          {/* <div className="input-group-text">
-            <label className="label-text" htmlFor="email">
-              Escribe un email:
-            </label>
-            <input
-              className="input-text"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="mariagarcia@gmail.com"
-              value={email}
-              onChange={handleEmail}
-            />
-          </div> */}
 
           {/* region */}
           <div className="input-group-select">
